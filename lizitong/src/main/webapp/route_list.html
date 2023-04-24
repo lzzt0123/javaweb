@@ -28,7 +28,8 @@
             // 页码加载触发和点击分页中的页码触发，因此放到外面比较合适
             function load(cid, currentPage, rname) {
                 //发送ajax请求，请求route/pageQuery,传递cid
-                $.get("route/pageQuery", {cid: cid, currentPage: currentPage,rname:rname}, function (pb) {
+                $.get("route/pageQuery", {cid: cid, currentPage: currentPage}, function (pb) {
+                    console.log(pb)
                     // 解析pageBean中的数据，将其展示到页面上
                     // 1. 展示的第一部分：分页工具条
                     //1.1 展示总页码和总记录数
